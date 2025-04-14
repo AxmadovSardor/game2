@@ -31,6 +31,7 @@ function change(event) {
         document.getElementById("output2").textContent = event.target.value;
         data.region = event.target.value;
     }
+    final(c);
 }
 
 
@@ -58,6 +59,7 @@ function submit() {
     setTimeout(() => {
     document.getElementById("reg").style.display = "none";
     }, time);}
+    final(c);
 }
 //================================================
 let realy = false
@@ -130,6 +132,11 @@ function one() {
     //     box.innerHTML = "";
     // }
 }
+function final(num3) {
+    if (num3 >= 32) {
+        document.getElementById("result").style.display = "flex"
+    }
+}
 function two() {
     data.age = data.age + code1[2];
 
@@ -171,6 +178,8 @@ function two() {
         document.getElementById("n3").classList.remove("active");
         c = c - 1;
     } 
+    final(c);
+
 }
 function three() {
     data.age = data.age + code1[2];
@@ -213,6 +222,8 @@ function three() {
         document.getElementById("n4").classList.remove("active");
         c = c - 1;
     } 
+    final(c);
+
 }
 
 function four() {
@@ -256,6 +267,8 @@ function four() {
         document.getElementById("n5").classList.remove("active");
         c = c - 1;
     } 
+    final(c);
+
 }
 function five() {
     data.age = data.age + code1[4];
@@ -298,6 +311,8 @@ function five() {
         document.getElementById("n6").classList.remove("active");
         c = c - 1;
     } 
+    final(c);
+
 }
 function six() {
     data.age = data.age + code1[5];
@@ -341,6 +356,7 @@ function six() {
         document.getElementById("n7").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function seven() {
@@ -385,6 +401,7 @@ function seven() {
         document.getElementById("n8").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function eight() {
@@ -463,6 +480,7 @@ function nine() {
         document.getElementById("n1").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function ten() {
@@ -516,6 +534,7 @@ function ten() {
         document.getElementById("n2").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n11() {
@@ -569,6 +588,7 @@ function n11() {
         document.getElementById("n3").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n12() {
@@ -622,6 +642,7 @@ function n12() {
         document.getElementById("n4").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n13() {
@@ -675,6 +696,7 @@ function n13() {
         document.getElementById("n5").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n14() {
@@ -728,6 +750,7 @@ function n14() {
         document.getElementById("n6").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n15() {
@@ -781,6 +804,7 @@ function n15() {
         document.getElementById("n7").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n16() {    
@@ -824,6 +848,7 @@ function n16() {
         document.getElementById("n8").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n17() {
@@ -864,6 +889,7 @@ function n17() {
         document.getElementById("n9").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n18() {
@@ -913,6 +939,7 @@ function n18() {
         document.getElementById("n10").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 function n19() {
     data.age = data.age + code3[2];
@@ -961,6 +988,7 @@ function n19() {
         document.getElementById("n11").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n20() {
@@ -1010,6 +1038,7 @@ function n20() {
         document.getElementById("n12").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n21() {
@@ -1059,6 +1088,7 @@ function n21() {
         document.getElementById("n13").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n22() {
@@ -1108,6 +1138,7 @@ function n22() {
         document.getElementById("n14").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 function n23() {
     data.age = data.age + code3[6];
@@ -1156,6 +1187,7 @@ function n23() {
         document.getElementById("n15").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 function n24() {
     data.age = data.age + code3[7];
@@ -1195,6 +1227,7 @@ function n24() {
         document.getElementById("n16").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 function n25() {
     data.age = data.age + code4[0];
@@ -1225,6 +1258,7 @@ function n25() {
         document.getElementById("n26").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n26() {
@@ -1264,6 +1298,7 @@ function n26() {
         document.getElementById("n25").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n27() {
@@ -1303,6 +1338,7 @@ function n27() {
         document.getElementById("n26").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 function n28() {
     data.age = data.age + code4[3];
@@ -1341,6 +1377,7 @@ function n28() {
         document.getElementById("n27").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 function n29() {
     data.age = data.age + code4[4];
@@ -1379,6 +1416,7 @@ function n29() {
         document.getElementById("n29").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n30() {
@@ -1418,6 +1456,7 @@ function n30() {
         document.getElementById("n30").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n31() {
@@ -1457,6 +1496,7 @@ function n31() {
         document.getElementById("n31").classList.remove("active");
         c = c - 1;
     }
+    final(c);
 }
 
 function n32() {
