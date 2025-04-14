@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="istockphoto-1408059546-612x612.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve the puzzle</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="reg" class="reg">
+        <div class="registr">
+            <h1>Registration</h1>
+            <div>
+                <label for="firstname">Nick: </label>
+                <input id="firstname" max="10" name="firstname" type="text" placeholder="Enter your nickname:" oninput="change(event)">
+            </div>
+        <div>
+            <label for="password">Bonus code:</label>
+            <input id="password" name="password" type="password" placeholder="Optional">
+        </div>
+
+            <select onchange="change(event)" name="Region" id="region">
+                <option value="..."></option>
+                <option value="Andijan">Andijan</option>
+                <option value="Bukhara">Bukhara</option>
+                <option value="Ferghana">Ferghana</option>
+                <option value="Jizzakh">Jizzakh</option>
+                <option value="Kashkadarya">Kashkadarya</option>
+                <option value="Karakalpakstan Rep.">Karakalpakstan Rep.</option>
+                <option value="Khorezm">Khorezm</option>
+                <option value="Namangan">Namangan</option>
+                <option value="Navoiy">Navoiy</option>
+                <option value="Samarkand">Samarkand</option>
+                <option value="Sirdaryo">Sirdaryo</option>
+                <option value="Surkhandarya">Surkhandarya</option>
+                <option value="Toshkent">Toshkent</option>               
+                <option value="Other">Other</option>
+            </select>
+            <button onclick="submit()">Submit</button>
+            <br>
+            <div>
+            <p>Your nick will be shown as <b id="output"></b></p>
+            <p>Your are from <b id="output2"></b></p>
+            </div>
+            <h2 id="ba"></h2>
+        </div>
+    </div>
+    <h1>Light all buttons:</h1>
+    <div class="table">
+        <div class="row">
+            <div>
+                <button onclick="one()" id="n1"></button>
+            </div>
+            <div>
+                <button  onclick="two()" id="n2" ></button>
+            </div>
+            <div>
+                <button  onclick="three()" id="n3"></button>
+            </div>
+            <div>
+                <button  onclick="four()" id="n4"></button>
+            </div>
+            <div>
+                <button  onclick="five()" id="n5"></button>
+            </div>
+            <div>
+                <button  onclick="six()" id="n6"></button>
+            </div>
+            <div>
+                <button  onclick="seven()" id="n7"></button>
+            </div>
+            <div>
+                <button  onclick="eight()" id="n8"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <button  onclick="nine()" id="n9"></button>
+            </div>
+            <div>
+                <button  onclick="ten()" id="n10"></button>
+            </div>
+            <div>
+                <button  onclick="n11()" id="n11"></button>
+            </div>
+            <div>
+                <button  onclick="n12()" id="n12"></button>
+            </div>
+            <div>
+                <button  onclick="n13()" id="n13"></button>
+            </div>
+            <div>
+                <button  onclick="n14()" id="n14"></button>
+            </div>
+            <div>
+                <button  onclick="n15()" id="n15"></button>
+            </div>
+            <div>
+                <button  onclick="n16()" id="n16"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <button  onclick="n17()" id="n17"></button>
+            </div>
+            <div>
+                <button  onclick="n18()" id="n18"></button>
+            </div>
+            <div>
+                <button  onclick="n19()" id="n19"></button>
+            </div>
+            <div>
+                <button  onclick="n20()" id="n20"></button>
+            </div>
+            <div>
+                <button  onclick="n21()" id="n21"></button>
+            </div>
+            <div>
+                <button  onclick="n22()" id="n22"></button>
+            </div>
+            <div>
+                <button  onclick="n23()" id="n23"></button>
+            </div>
+            <div>
+                <button  onclick="n24()" id="n24"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <button  onclick="n25()" id="n25"></button>
+            </div>
+            <div>
+                <button  onclick="n26()" id="n26"></button>
+            </div>
+            <div>
+                <button  onclick="n27()" id="n27"></button>
+            </div>
+            <div>
+                <button  onclick="n28()" id="n28"></button>
+            </div>
+            <div>
+                <button  onclick="n29()" id="n29"></button>
+            </div>
+            <div>
+                <button  onclick="n30()" id="n30"></button>
+            </div>
+            <div>
+                <button  onclick="n31()" id="n31"></button>
+            </div>
+            <div>
+                <button  onclick="n32()" id="n32"></button>
+            </div>
+        </div>
+    </div>
+    <div id="result">
+        <div class="yourr">
+            
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
