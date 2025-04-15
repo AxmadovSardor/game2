@@ -57,6 +57,7 @@ h1{
 
 
 .reg{
+    z-index: 50;
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -82,8 +83,44 @@ h1{
     border-radius: 30px;
 }
 
+.ozg{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.info{
+    display: flex;
+    color: white;
+    width: 80%;
+    flex-direction: column;
+    font-family: Arial;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usr{
+    outline: none;
+    width: 50%;
+    border: 0px;
+    padding: 5px;
+    background-color: rgb(178, 34, 34);
+    border-radius: 3px;
+    font-family: Arial;
+    color: white;
+}
+.subm{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
 #result{
-    z-index: 2;
+    z-index: 100;
     position: fixed;
     top: 0px;
     background-color: rgba(0, 0, 64, 0.608);
@@ -92,6 +129,29 @@ h1{
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+#reset{
+    position:absolute;
+    top: 6vh;
+    left: 60px;
+    background-color: rgba(253, 253, 253, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset button{
+    background-color: rgb(255, 255, 0);
+    cursor: pointer;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0px;
 }
 
 #yourr{
@@ -104,6 +164,61 @@ h1{
     justify-content: center;
 }
 
+.col1{
+    display: flex;
+    width: 60vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sy{
+    font-family: Arial;
+    font-size: 22px; 
+}
+
+.yd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.note{
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.s{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.lab{
+    color:white;
+}
+.bot{
+    height: 100px;
+}
+
+#link{
+    cursor:pointer;
+}
+
+#link img{
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    border-radius: 30px;
+    background-color: transparent;
+}
 #syrp{
     width: 80%;
 }

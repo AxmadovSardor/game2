@@ -39,17 +39,10 @@ function submit() {
     let firstname = document.getElementById("firstname");
     rel = firstname.value;
     if (firstname.value == "") {
-        // if (document.getElementById("password").value == "1234") {
-        //     document.getElementById("ba").textContent = "✔Succes"
-        // } else {
         document.getElementById("ba").textContent = "❌Enter your nick"  
-        // }
+
     } else if(document.getElementById("region").selectedIndex == 0){
-        // if (document.getElementById("password").value == "1234") {
-        //     document.getElementById("ba").textContent = "❌Login is incorrect"
-        // } else {
-            document.getElementById("ba").textContent = "❌Enter your region"  
-        // }
+        document.getElementById("ba").textContent = "❌Enter your region"  
     } else { 
     document.getElementById("ba").textContent = "🕐Loading..."  
 
@@ -72,6 +65,17 @@ for (let index = 0; index < 32; index++) {
         // let c = c - 1;
     }
 }
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "r" || event.key === "R") {
+      reset();
+    }
+  });
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        submit();
+    }
+});
 let c = 0;
 let num = (Math.random() / 0.05);
 num = Math.round(num)
@@ -79,6 +83,32 @@ for (let index = 0; index < num; index++) {
     let num1 = (Math.random() / 0.03125);
     num1 = Math.round(num1)  
     cod[num1] = true
+}
+function reset() {
+    data.age = ""
+    cod = []
+    c = 0
+    for (let index = 0; index < 32; index++) {
+        cod.push(false)
+        document.getElementById(`n${index + 1}`).classList.remove("active");
+    }
+
+    let num = (Math.random() / 0.05);
+    num = Math.round(num)
+    for (let index = 0; index < num; index++) {
+        let num1 = (Math.random() / 0.03125);
+        num1 = Math.round(num1)  
+        cod[num1] = true
+    }
+    for (let index = 0; index < 32; index++) {
+        if (cod[index] === true) {
+            document.getElementById(`n${index + 1}`).classList.add("active");
+            c = c + 1;
+        } else{
+           document.getElementById(`n${index + 1}`).classList.remove("active");
+        }
+    }
+    final(c)
 }
 
 for (let index = 0; index < 32; index++) {
@@ -89,9 +119,7 @@ for (let index = 0; index < 32; index++) {
         document.getElementById(`n${index + 1}`).classList.remove("active");
     }
 }
-final(c)
 
-console.log(c)
 
 // 0.03125
 
@@ -128,11 +156,29 @@ function one() {
     }
 
 }
+function myFunction() {
+    console.log(data.age)
+    let res = data.age + data.nick + data.region
+    console.log(res) 
+    // Select the text field
+    // res.select();
+    // res.setSelectionRange(0, 99999); // For mobile devices
+  
+     // Copy the text inside the text field
+    navigator.clipboard.writeText(res);
+}
 function final(num3) {
     if (num3 >= 32) {
         document.getElementById("result").style.display = "flex"
+        document.getElementById("link").innerHTML = `<button id="link" onclick='myFunction()'><img src='13949696.png'></button>`;
+        document.getElementById("syrp").innerHTML = "<video autoplay><source src='sike.mp4' type='video/mp4'></video>";
+        document.getElementById("sy").innerHTML = "<h1>You Won 🎉✨🎊</h1>";
+        document.getElementById("sy").innerHTML = "<h1>You Won 🎉✨🎊</h1>";
+        document.getElementById("bot").href = "https://t.me/questianonbot?start=5822990554b";
+
     }
 }
+
 function two() {
     data.age = data.age + code1[2];
 
@@ -178,7 +224,6 @@ function two() {
     
 }
 
-document.getElementById("syrp").innerHTML = "<video autoplay><source src='sike.mp4' type='video/mp4'></video>";
 
 function three() {
     data.age = data.age + code1[2];
@@ -313,6 +358,8 @@ function five() {
     final(c);
 
 }
+
+
 function six() {
     data.age = data.age + code1[5];
 
@@ -357,6 +404,7 @@ function six() {
     }
     final(c);
 }
+
 
 function seven() {
     data.age = data.age + code1[6];
@@ -438,7 +486,6 @@ function eight() {
 
 }
 
-const surp = document.createElement("")
 
 
 function nine() {

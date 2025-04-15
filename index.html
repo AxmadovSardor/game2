@@ -11,42 +11,47 @@
     <div id="reg" class="reg">
         <div class="registr">
             <h1>Registration</h1>
-            <div>
+            <div class="ozg">
                 <label for="firstname">Nick: </label>
-                <input id="firstname" max="10" name="firstname" type="text" placeholder="Enter your nickname:" oninput="change(event)">
+                <input id="firstname" max="10" class="usr" name="firstname" type="text" placeholder="Enter your nickname:" oninput="change(event)">
             </div>
-        <div>
-            <label for="password">Bonus code:</label>
-            <input id="password" name="password" type="password" placeholder="Optional">
-        </div>
-
-            <select onchange="change(event)" name="Region" id="region">
-                <option value="..."></option>
-                <option value="Andijan">Andijan</option>
-                <option value="Bukhara">Bukhara</option>
-                <option value="Ferghana">Ferghana</option>
-                <option value="Jizzakh">Jizzakh</option>
-                <option value="Kashkadarya">Kashkadarya</option>
-                <option value="Karakalpakstan Rep.">Karakalpakstan Rep.</option>
-                <option value="Khorezm">Khorezm</option>
-                <option value="Namangan">Namangan</option>
-                <option value="Navoiy">Navoiy</option>
-                <option value="Samarkand">Samarkand</option>
-                <option value="Sirdaryo">Sirdaryo</option>
-                <option value="Surkhandarya">Surkhandarya</option>
-                <option value="Toshkent">Toshkent</option>               
-                <option value="Other">Other</option>
-            </select>
-            <button onclick="submit()">Submit</button>
+            <div class="ozg">
+                <label for="password">Bonus code: (Optional)</label>
+                <input id="password" name="password" type="password" placeholder="Your bonus code" class="usr">
+            </div>
+            <div class="ozg">
+                <label for="Region">Region: </label>
+                <select onchange="change(event)" name="Region" class="usr" id="region">
+                    <option value="..."></option>
+                    <option value="Andijan">Andijan</option>
+                    <option value="Bukhara">Bukhara</option>
+                    <option value="Ferghana">Ferghana</option>
+                    <option value="Jizzakh">Jizzakh</option>
+                    <option value="Kashkadarya">Kashkadarya</option>
+                    <option value="Karakalpakstan Rep.">Karakalpakstan Rep.</option>
+                    <option value="Khorezm">Khorezm</option>
+                    <option value="Namangan">Namangan</option>
+                    <option value="Navoiy">Navoiy</option>
+                    <option value="Samarkand">Samarkand</option>
+                    <option value="Sirdaryo">Sirdaryo</option>
+                    <option value="Surkhandarya">Surkhandarya</option>
+                    <option value="Toshkent">Toshkent</option>               
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <button class="subm" onclick="submit()">Submit</button>
             <br>
-            <div>
-            <p>Your nick will be shown as <b id="output"></b></p>
-            <p>Your are from <b id="output2"></b></p>
+            <div class="info">
+                <p>Your nick will be shown as <b id="output"></b></p>
+                <p>Your are from <b id="output2"></b></p>
+                <h2 id="ba"></h2>
             </div>
-            <h2 id="ba"></h2>
         </div>
     </div>
     <h1>Light all buttons:</h1>
+    <div id="reset">
+        <button onclick="reset()">Reset ↺</button>
+    </div>
     <div class="table">
         <div class="row">
             <div>
@@ -155,8 +160,18 @@
     </div>
     <div id="result">
         <div id="yourr">
-            <h1 id="sy"></h1>
-            <p id="rfr"></p>
+            <div class="col1">
+                <h1 id="sy"></h1>
+                <div class="yd">
+                    <p class="note">If you want to me put your score on leaderboard, send text that copied from clicking icon to this anonym bot below.</p>
+                    <div class="s">
+                        <label class="lab" for="link">Copy it first:</label>
+                        <div name="link" id="link"></div>
+                        <label class="lab" for="bot">Anonym bot:</label>
+                        <a href="" name="bot" id="bot"><img class="bot" src="Telegram_logo.png" alt="anonym bot"></a>
+                    </div>
+                </div>
+            </div>
             <div id="syrp">
             </div>
         </div>
