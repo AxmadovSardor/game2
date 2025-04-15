@@ -139,6 +139,10 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+    color: gray;
+    font-family: Arial;
+    font-weight: bold;
 }
 
 #reset button{

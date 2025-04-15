@@ -29,6 +29,35 @@ function change(event) {
     } else {
         document.getElementById("output2").textContent = event.target.value;
         data.region = event.target.value;
+        if(data.region == "Andijan"){
+            data.region = code3[0]
+        } else if(data.region == "Bukhara"){
+            data.region = code3[1]
+        } else if(data.region == "Fergana"){
+            data.region = code3[2]
+        } else if(data.region == "Jizzakh"){
+            data.region = code3[3]
+        } else if(data.region == "Kashkadarya"){
+            data.region = code3[4]
+        } else if(data.region == "Karakalpakstan Rep."){ 
+            data.region = code3[5]
+        } else if(data.region == "Khorezm"){
+            data.region = code3[6]
+        } else if(data.region == "Namangan"){
+            data.region = code3[7]
+        }     else if(data.region == "Navoiy"){
+            data.region = code4[0]
+        } else if(data.region == "Samarkand"){
+            data.region = code4[1]
+        } else if(data.region == "Sirdaryo"){
+            data.region = code4[2]
+        } else if(data.region == "Surkhandarya"){
+            data.region = code4[3]
+        } else if(data.region == "Tashkent"){
+            data.region = code4[4]
+        } else {
+            data.region = code4[5]
+        }
     }
 }
 
