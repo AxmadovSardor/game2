@@ -1,6 +1,5 @@
 //Inspired by game in the game
 //https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=0gcJCdgAo7VqN5tD
-
 let code1 = ["a", 'l', "1", "g", "h", "k", 'd', '9']
 let code2 = ['q', '3', 'w', 'f', 'x', 'y', 'o', '2']
 let code3 = ["b", 's', "4", "z", "t", "n", 'm', '6']
@@ -31,7 +30,6 @@ function change(event) {
         document.getElementById("output2").textContent = event.target.value;
         data.region = event.target.value;
     }
-    final(c);
 }
 
 
@@ -75,7 +73,6 @@ for (let index = 0; index < 32; index++) {
     }
 }
 let c = 0;
-
 let num = (Math.random() / 0.05);
 num = Math.round(num)
 for (let index = 0; index < num; index++) {
@@ -92,6 +89,8 @@ for (let index = 0; index < 32; index++) {
         document.getElementById(`n${index + 1}`).classList.remove("active");
     }
 }
+final(c)
+
 console.log(c)
 
 // 0.03125
@@ -127,10 +126,7 @@ function one() {
         document.getElementById("n9").classList.remove("active");
         c = c - 1;
     }
-    // if (c = 32) {
-    //     box = document.getElementById("result");
-    //     box.innerHTML = "";
-    // }
+
 }
 function final(num3) {
     if (num3 >= 32) {
@@ -179,8 +175,11 @@ function two() {
         c = c - 1;
     } 
     final(c);
-
+    
 }
+
+document.getElementById("syrp").innerHTML = "<video autoplay><source src='sike.mp4' type='video/mp4'></video>";
+
 function three() {
     data.age = data.age + code1[2];
 
@@ -438,6 +437,9 @@ function eight() {
     }
 
 }
+
+const surp = document.createElement("")
+
 
 function nine() {
     data.age = data.age + code2[0];
@@ -1528,7 +1530,5 @@ function n32() {
         c = c - 1;
     }
     console.log(data)
-    console.log(c)
+    final(c)
 }
-    
-
