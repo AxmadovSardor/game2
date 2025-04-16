@@ -62,6 +62,7 @@ function change(event) {
 }
 
 
+
 //Topshiriq
 function submit() {
     
@@ -183,7 +184,7 @@ function one() {
         document.getElementById("n9").classList.remove("active");
         c = c - 1;
     }
-
+    final(c)
 }
 function myFunction() {
     console.log(data.age)
@@ -203,7 +204,7 @@ function final(num3) {
         document.getElementById("syrp").innerHTML = "<video autoplay><source src='sike.mp4' type='video/mp4'></video>";
         document.getElementById("sy").innerHTML = "<h1>You Won 🎉✨🎊</h1>";
         document.getElementById("sy").innerHTML = "<h1>You Won 🎉✨🎊</h1>";
-        document.getElementById("bot").href = "https://t.me/questianonbot?start=5822990554b";
+        document.getElementById("bot").href = `https://t.me/puzzle_result_bot?text=${data.age + data.nick + data.region}`;
 
     }
 }
@@ -512,7 +513,7 @@ function eight() {
         document.getElementById("n16").classList.remove("active");
         c = c - 1;
     }
-
+    final(c)
 }
 
 
