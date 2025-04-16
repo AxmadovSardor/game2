@@ -10,6 +10,7 @@ let cod = []
 //===============================================
 let data = {
     nick: "",
+    prev: "",
     region: "",
     age: ""
 };
@@ -107,13 +108,26 @@ document.addEventListener("keydown", function(event) {
     }
 });
 let c = 0;
-let num = (Math.random() / 0.05);
-num = Math.round(num)
-for (let index = 0; index < num; index++) {
-    let num1 = (Math.random() / 0.03125);
-    num1 = Math.round(num1)  
-    cod[num1] = true
+
+bir = false
+while (bir == false) {
+    let num = (Math.random() / 0.05);
+    num = Math.round(num)
+    
+    for (let index = 0; index < num; index++) {
+        let num1 = (Math.random() / 0.03125);
+        num1 = Math.round(num1)  
+        cod[num1] = true
+        data.prev = data.prev + num1 +"-"
+    }
+    if (num == 0) {
+        bir = false
+    } else{
+        bir = true
+    }
 }
+
+
 function reset() {
     data.age = ""
     cod = []
@@ -123,13 +137,24 @@ function reset() {
         document.getElementById(`n${index + 1}`).classList.remove("active");
     }
 
-    let num = (Math.random() / 0.05);
-    num = Math.round(num)
-    for (let index = 0; index < num; index++) {
-        let num1 = (Math.random() / 0.03125);
-        num1 = Math.round(num1)  
-        cod[num1] = true
+
+    bir = false
+    while (bir == false) {
+        let num = (Math.random() / 0.05);
+        num = Math.round(num)
+        for (let index = 0; index < num; index++) {
+            let num1 = (Math.random() / 0.03125);
+            num1 = Math.round(num1)  
+            cod[num1] = true
+            data.prev = "-" + data.prev + num1
+        }
+        if (num == 0) {
+            bir = false
+        } else{
+            bir = true
+        }
     }
+
     for (let index = 0; index < 32; index++) {
         if (cod[index] === true) {
             document.getElementById(`n${index + 1}`).classList.add("active");
@@ -187,14 +212,7 @@ function one() {
     final(c)
 }
 function myFunction() {
-    console.log(data.age)
-    let res = data.age + data.nick + data.region
-    console.log(res) 
-    // Select the text field
-    // res.select();
-    // res.setSelectionRange(0, 99999); // For mobile devices
-  
-     // Copy the text inside the text field
+    let res = data.age + data.nick + data.region + data.prev
     navigator.clipboard.writeText(res);
 }
 function final(num3) {
@@ -203,9 +221,7 @@ function final(num3) {
         document.getElementById("link").innerHTML = `<button id="link" onclick='myFunction()'><img src='13949696.png'></button>`;
         document.getElementById("syrp").innerHTML = "<video autoplay><source src='sike.mp4' type='video/mp4'></video>";
         document.getElementById("sy").innerHTML = "<h1>You Won 🎉✨🎊</h1>";
-        document.getElementById("sy").innerHTML = "<h1>You Won 🎉✨🎊</h1>";
-        document.getElementById("bot").href = `https://t.me/puzzle_result_bot?text=${data.age + data.nick + data.region}`;
-
+        document.getElementById("bot").href = `https://t.me/puzzle_result_bot?text=${data.age + data.nick + data.prev + data.region}`;
     }
 }
 
@@ -434,6 +450,7 @@ function six() {
     }
     final(c);
 }
+
 
 
 function seven() {
