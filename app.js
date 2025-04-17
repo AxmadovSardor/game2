@@ -137,7 +137,7 @@ function reset() {
         document.getElementById(`n${index + 1}`).classList.remove("active");
     }
 
-
+    data.prev = ""
     bir = false
     while (bir == false) {
         let num = (Math.random() / 0.05);
@@ -146,7 +146,7 @@ function reset() {
             let num1 = (Math.random() / 0.03125);
             num1 = Math.round(num1)  
             cod[num1] = true
-            data.prev = "-" + data.prev + num1
+            data.prev = data.prev + num1 +"-"
         }
         if (num == 0) {
             bir = false
@@ -181,6 +181,7 @@ for (let index = 0; index < 32; index++) {
 
 function one() {
     data.age = data.age + code1[0];
+
     cod[0] = !cod[0];
     
     if (cod[0] === true) {
