@@ -87,7 +87,7 @@ function submit() {
 let realy = false
 
 for (let index = 0; index < 32; index++) {
-    cod.push(false)
+    cod.push(true)
     if (cod[index] === true) {
         document.getElementById(`n${index + 1}`).classList.add("active");
         // let c = c + 1;
@@ -109,51 +109,72 @@ document.addEventListener("keydown", function(event) {
 });
 let c = 0;
 
-bir = false
-while (bir == false) {
-    let num = (Math.random() / 0.05);
-    num = Math.round(num)
-    
-    for (let index = 0; index < num; index++) {
-        let num1 = (Math.random() / 0.03125);
-        num1 = Math.round(num1)  
-        cod[num1] = true
-        data.prev = data.prev + num1 +"-"
-    }
-    if (num == 0) {
-        bir = false
-    } else{
-        bir = true
-    }
+let num = (Math.random() * 40) + 10;
+num = Math.round(num)
+
+
+let func = [
+    one,
+    two,
+    three,
+    four,
+    five,
+    six,
+    seven,
+    eight,
+    nine,
+    ten,
+    n11,
+    n12,
+    n13,
+    n14,
+    n15,
+    n16,
+    n17,
+    n18,
+    n19,
+    n20,
+    n21,
+    n22,
+    n23,
+    n24,
+    n25,
+    n26,
+    n27,
+    n28,
+    n29,
+    n30,
+    n31,
+    n32    
+]
+
+for (let index = 0; index < num; index++) {
+    let num1 = Math.random() / 0.03225806451612903225806451612903
+    num1 = Math.round(num1)
+    func[num1]() 
 }
 
+async function name(params) {
+    
+}
 
 function reset() {
-    data.age = ""
-    cod = []
-    c = 0
-    for (let index = 0; index < 32; index++) {
-        cod.push(false)
-        document.getElementById(`n${index + 1}`).classList.remove("active");
-    }
+    let num = (Math.random() * 40) + 10;
+    num = Math.round(num)
+    data.length = num
 
     data.prev = ""
-    bir = false
-    while (bir == false) {
-        let num = (Math.random() / 0.05);
-        num = Math.round(num)
-        for (let index = 0; index < num; index++) {
-            let num1 = (Math.random() / 0.03125);
-            num1 = Math.round(num1)  
-            cod[num1] = true
-            data.prev = data.prev + num1 +"-"
-        }
-        if (num == 0) {
-            bir = false
-        } else{
-            bir = true
-        }
+    for (let index = 0; index < num; index++) {
+        let num1 = Math.random() / 0.03225806451612903225806451612903
+        num1 = Math.round(num1)
+        func[num1]()
+        data.prev = num1 +  "-" + data.prev
     }
+    data.age()
+    console.log(data.prev)
+    console.log(data);
+    
+
 
     for (let index = 0; index < 32; index++) {
         if (cod[index] === true) {
@@ -1624,6 +1645,5 @@ function n32() {
         document.getElementById("n32").classList.remove("active");
         c = c - 1;
     }
-    console.log(data)
     final(c)
 }
